@@ -17,7 +17,7 @@ def run_flask(): app_flask.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8
 Thread(target=run_flask).start()
 
 # --- 2. SETTINGS (FRIEND) ---
-TOKEN = '8783186988:AAFYb8O2uV-kjmC9HYmSuM6b5ZV19y3FUCY' 
+TOKEN = '8783186988:AAGqVgnv2iN5Ga6vaDk0Ab0tkWRVMDBtVnc' 
 ADMIN_IDS = [8551508208, 8820964089] 
 BOT_USERNAME = "blackeyesvide000s_bot" 
 BUY_LINK = "https://t.me/SaulGoodmanOp"
