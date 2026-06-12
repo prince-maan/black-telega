@@ -20,7 +20,7 @@ Thread(target=run_flask).start()
 TOKEN = '8783186988:AAGqVgnv2iN5Ga6vaDk0Ab0tkWRVMDBtVnc' 
 ADMIN_IDS = [8551508208, 8820964089,8895101534] 
 BOT_USERNAME = "blackeyesvide000s_bot" 
-BUY_LINK = "https://t.me/SaulGoodmanOp"
+BUY_LINK = "https://t.me/theHeisenberg009"
 # 👇 यहाँ अपने प्राइवेट मास्टर चैनल की ID डालें (-100 से शुरू होनी चाहिए)
 DB_CHANNEL_ID = -1003846345760
 
@@ -99,7 +99,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # --- 5. REDEEM SYSTEM ---
 async def redeem_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.callback_query.answer()
-    await update.callback_query.message.reply_text("✍️ **Please type and send your promo code:**\nकृपया अपना प्रोमो कोड टाइप करके भेजें:\n\n(Send /cancel to abort)")
+    await update.callback_query.message.reply_text("✍️ **Please type and send your promo code:**\n\nकृपया अपना प्रोमो कोड टाइप करके भेजें:\n\n(Send /cancel to abort)")
     return WAIT_REDEEM_CODE
 
 async def process_redeem(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -116,7 +116,7 @@ async def process_redeem(update: Update, context: ContextTypes.DEFAULT_TYPE):
         USER_COLLECTION.update_one({"_id": user.id}, {"$set": {'name': user.first_name, 'username': user.username, 'tier': tier, 'code': code, 'expiry': expiry_str, 'join_date': now.strftime("%Y-%m-%d %I:%M %p")}}, upsert=True)
         await update.message.reply_text(f"🎉 **Congratulations! / बधाई हो!**\n\nYour **{tier.upper()}** plan has been successfully activated! (Validity: {days} Days)")
     else: 
-        await update.message.reply_text("❌ **Invalid or Expired code.**\nकोड गलत है या एक्सपायर हो चुका है।")
+        await update.message.reply_text("❌ **Invalid or Expired code.**\n\nकोड गलत है या एक्सपायर हो चुका है।")
     return ConversationHandler.END
 
 # --- 6. ADMIN DASHBOARD & FULL STATS ---
