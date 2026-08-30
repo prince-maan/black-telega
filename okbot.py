@@ -21,16 +21,16 @@ from telebot.types import (
 # 🛑 सेटिंग्स (लोकल और रेंडर दोनों के लिए) 🛑
 # ==========================================
 BOT_TOKEN = os.environ.get(
-    "BOT_TOKEN", "8986044820:AAFgYI_F_MH0LQT5VX95_umWjkUaMx9cfug"
+    "BOT_TOKEN", "8156047438:AAHwf3DrtrWerCA6lTLVlivznySMeR7k_z4"
 ).strip()
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "8820964089").strip())
-DB_CHANNEL_ID = int(os.environ.get("DB_CHANNEL_ID", "-1003757631353").strip())
+DB_CHANNEL_ID = int(os.environ.get("DB_CHANNEL_ID", "-1004362585187").strip())
 UPI_ID = os.environ.get("UPI_ID", "Q520245588@ybl").strip()
 MERCHANT_NAME = os.environ.get("MERCHANT_NAME", "Study Wala").strip()
 
-CHAT_LINK = os.environ.get("CHAT_LINK", "https://t.me/SaulGoodmanOp").strip()
+CHAT_LINK = os.environ.get("CHAT_LINK", "https://t.me/theHeisenberg009").strip()
 INTERNATIONAL_LINK = os.environ.get(
-    "INTERNATIONAL_LINK", "https://t.me/SaulGoodmanOp"
+    "INTERNATIONAL_LINK", "https://t.me/theHeisenberg009"
 ).strip()
 
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -561,7 +561,7 @@ def handle_all_messages(message):
     check_msg = bot.send_message(
         user_id, 
         "⏳ <b>Your payment proof is received. It will be approved in 5 minutes...</b>\n"
-        "<i>(Aapka payment proof mil gaya hai. 5 min mein approve ho jayega... @SaulGoodmanOp )</i>", 
+        "<i>(Aapka payment proof mil gaya hai. 5 min mein approve ho jayega... @theHeisenberg009 )</i>", 
         parse_mode="HTML"
     )
 
@@ -940,11 +940,11 @@ def handle_buttons(call):
     parts = data.split("_")
     reason_code, user_id, course_id = parts[1], int(parts[2]), parts[3]
     if reason_code == "fake":
-      reason = "Your screenshot is invalid/fake. Chat now - @SaulGoodmanOp"
+      reason = "Your screenshot is invalid/fake. Chat now  - @theHeisenberg009p"
     elif reason_code == "notrecv":
-      reason = "We haven't received your payment. Chat now - @SaulGoodmanOp"
+      reason = "We haven't received your payment. Chat now - @theHeisenberg009"
     elif reason_code == "wrong":
-      reason = "You have sent the wrong amount. Chat now - @SaulGoodmanOp"
+      reason = "You have sent the wrong amount. Chat now - @theHeisenberg009"
 
     if user_id in pending_verifications:
       try:
