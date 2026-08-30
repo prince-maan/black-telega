@@ -23,10 +23,10 @@ from telebot.types import (
 BOT_TOKEN = os.environ.get(
     "BOT_TOKEN", "8156047438:AAHwf3DrtrWerCA6lTLVlivznySMeR7k_z4"
 ).strip()
-ADMIN_ID = int(os.environ.get("ADMIN_ID", "8820964089").strip())
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "8551508208").strip())
 DB_CHANNEL_ID = int(os.environ.get("DB_CHANNEL_ID", "-1004362585187").strip())
-UPI_ID = os.environ.get("UPI_ID", "Q520245588@ybl").strip()
-MERCHANT_NAME = os.environ.get("MERCHANT_NAME", "Study Wala").strip()
+UPI_ID = os.environ.get("UPI_ID", "Q595883872@ybl").strip()
+MERCHANT_NAME = os.environ.get("MERCHANT_NAME", "The Heisenberg Paymants").strip()
 
 CHAT_LINK = os.environ.get("CHAT_LINK", "https://t.me/theHeisenberg009").strip()
 INTERNATIONAL_LINK = os.environ.get(
